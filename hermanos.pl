@@ -102,5 +102,6 @@ sobrino(X, Y) :- tio(Y, X), hombre(X).
 sobrina(X, Y) :- tia(Y, X), mujer(X).
 sobrina(X, Y) :- tio(Y, X), mujer(X).
 
-mediohermano(X, Y) :- padre(C, X), padre(D, Y), madre(E, X), madre(E, Y), hombre(X), X\=Y.
-mediohermana(X, Y) :- padre(C, X), padre(D, Y), madre(E, X), madre(E, Y), mujer(X), X\=Y.
+mediohermano(X, Y) :- padre(C, X), padre(D, Y), madre(E, X), madre(E, Y), hombre(X), X\=Y, C\=D.
+mediohermana(X, Y) :- padre(C, X), padre(D, Y), madre(E, X), madre(E, Y), mujer(X), X\=Y, C\=D.
+
